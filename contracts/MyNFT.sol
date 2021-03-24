@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import '@openzeppelin/contracts/math/Math.sol';
@@ -28,8 +28,8 @@ contract MyNFT is ERC721 {
 
     }
 
-    function isRegistered(address recipient_) public returns (bool) {
-        if(registered[recipient_] == true){
+    function isRegistered(address _recipient) public returns (bool) {
+        if(registered[_recipient] == true){
             return true;
         }
         else{
@@ -37,8 +37,12 @@ contract MyNFT is ERC721 {
         }
     }
 
-    function registerBreeder(address recipient_) public onlyOwner {
-        registered[recipient_] = true;
+    function exist(uint256 tokenId) public returns(bool) {
+        return _exists(tokenId);
+    }
+
+    function registerBreeder(address _recipient) public onlyOwner {
+        registered[_recipient] = true;
         return true;
     }
 
