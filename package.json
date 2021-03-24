@@ -1,0 +1,17 @@
+{
+  "name": "NFT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.1",
+    "openzeppelin-solidity": "^3.4.1",
+    "truffle": "^5.2.4"
+  }
+}
